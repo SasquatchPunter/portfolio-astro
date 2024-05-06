@@ -1,0 +1,14 @@
+---
+import AstroHeader from "@components/Header.astro";
+import SvelteHeader from "@components/Header.svelte";
+import ReactHeader from "@components/Header.jsx";
+import SiteNav from "@layouts/SiteNav.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Home">
+  <SiteNav />
+  <AstroHeader />
+  <SvelteHeader />
+  <ReactHeader />
+</BaseLayout>
