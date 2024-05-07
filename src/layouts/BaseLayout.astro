@@ -1,4 +1,5 @@
 ---
+import StageBanner from "@components/StageBanner.astro";
 import BaseBody from "./BaseBody.astro";
 import BaseHead from "./BaseHead.astro";
 
@@ -11,6 +12,7 @@ const { title } = Astro.props;
   </BaseHead>
 
   <BaseBody>
+    <StageBanner />
     <slot />
   </BaseBody>
 </html>
