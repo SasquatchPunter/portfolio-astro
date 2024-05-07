@@ -11,7 +11,7 @@ const posts = await getCollection("blog");
     {
       posts.map((entry) => (
         <li>
-          <a href={`/blog/${entry.slug}`}>{entry.data.title}</a>
+          <a href={`${Astro.url}/${entry.slug}`}>{entry.data.title}</a>
         </li>
       ))
     }
