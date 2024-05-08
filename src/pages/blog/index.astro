@@ -3,6 +3,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import SiteNav from "@layouts/SiteNav.astro";
 import { getCollection } from "astro:content";
 const posts = await getCollection("blog");
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Blog">
@@ -11,7 +12,7 @@ const posts = await getCollection("blog");
     {
       posts.map((entry) => (
         <li>
-          <a href={`${Astro.url}/${entry.slug}`}>{entry.data.title}</a>
+          <a href={`${base}/blog/${entry.slug}`}>{entry.data.title}</a>
         </li>
       ))
     }

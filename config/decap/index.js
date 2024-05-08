@@ -18,7 +18,7 @@ export default {
     branch: "master",
     squash_merges: true,
   },
-  display_url: "/blog",
+  display_url: `${import.meta.env.BASE_URL}/blog`,
   logo_url: "/favicon.svg",
   media_folder: "public/uploads/images",
   public_folder: "/uploads/images",
