@@ -1,7 +1,5 @@
 import { z, defineCollection } from "astro:content";
 
-const base = import.meta.env.BASE_URL;
-
 export default defineCollection({
   type: "content",
   schema: z.object({

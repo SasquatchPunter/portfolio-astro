@@ -1,8 +1,8 @@
 ---
-import P from "@components/markdown/P.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import SiteNav from "@layouts/SiteNav.astro";
 import { getCollection } from "astro:content";
+import Markdown from "@components/react/Markdown";
 
 export async function getStaticPaths() {
   const blogPosts = await getCollection("blog");
@@ -14,11 +14,20 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const { body } = entry;
 const { Content } = await entry.render();
 ---
 
 <BaseLayout title={`Blog | ${entry.data.title}`}>
   <SiteNav />
-  <h1 class="text-2xl">{entry.data.title}</h1>
-  <Content />
+  <header>
+    <h1 class="text-2xl">{entry.data.title}</h1>
+    {
+      entry.data.featured_image && (
+        <img src={`${import.meta.env.BASE_URL}${entry.data.featured_image}`} />
+      )
+    }
+  </header>
+  <Markdown {body} />
+  <!-- <Content /> -->
 </BaseLayout>

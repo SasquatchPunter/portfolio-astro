@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [svelte(), tailwind(), react()],
   outDir: "build",
   devToolbar: { enabled: false },
-  base: "/ok",
+  base: "/dev",
   markdown: {
     remarkPlugins: [],
   },
