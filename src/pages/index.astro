@@ -1,19 +1,8 @@
 ---
-import AstroHeader from "@components/Header.astro";
-import SvelteHeader from "@components/Header.svelte";
-import ReactHeader from "@components/Header.jsx";
 import SiteNav from "@layouts/SiteNav.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
-
-import Markdown from "@components/react/Markdown";
-
-const body = "# Hi, *Fuckface*!";
 ---
 
 <BaseLayout title="Home">
   <SiteNav />
-  <AstroHeader />
-  <SvelteHeader />
-  <ReactHeader />
-  <Markdown {body} />
 </BaseLayout>

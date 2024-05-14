@@ -10,6 +10,7 @@ export default defineConfig({
   devToolbar: { enabled: false },
   base: "/dev",
   markdown: {
-    remarkPlugins: [],
+    // remarkPlugins: [],
+    // rehypePlugins: [],
   },
 });

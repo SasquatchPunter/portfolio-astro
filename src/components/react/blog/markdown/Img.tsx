@@ -1,4 +1,5 @@
 export default function Image({ children, node }) {
+  console.log("processing Image!");
   return (
     <img
       src={`${import.meta.env.BASE_URL}${node.properties.src || ""}`}
