@@ -1,5 +1,5 @@
 import BlogPostHeader from "./BlogPostHeader";
-import MarkdownToReact from "./MarkdownToReact";
+import Renderer from "./Renderer";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -12,7 +12,7 @@ export default function BlogPost({ entry }: Props) {
   return (
     <article>
       <BlogPostHeader title={title} featured_image={featured_image} />
-      <MarkdownToReact body={body} />
+      <Renderer>{body}</Renderer>
     </article>
   );
 }

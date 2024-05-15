@@ -9,8 +9,4 @@ export default defineConfig({
   outDir: "build",
   devToolbar: { enabled: false },
   base: "/dev",
-  markdown: {
-    // remarkPlugins: [],
-    // rehypePlugins: [],
-  },
 });

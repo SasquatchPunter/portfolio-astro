@@ -1,4 +1,9 @@
-export default function PostHeader({ title, featured_image }) {
+interface Props {
+  title: string;
+  featured_image: string;
+}
+
+export default function PostHeader({ title, featured_image }: Props) {
   return (
     <header>
       <h1 className="text-2xl">{title}</h1>
