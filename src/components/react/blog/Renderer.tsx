@@ -9,14 +9,24 @@ import type { RehypeShikiOptions } from "@shikijs/rehype";
 import rehypeShikiFromHighlighter from "@shikijs/rehype/core";
 import { getHighlighterCore } from "shiki";
 
-import { H1, Code, Pre, Img } from "@components/react/blog/markdown";
+import {
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  Code,
+  Pre,
+  Img,
+} from "@components/react/blog/markdown";
 
 const highlighter = await getHighlighterCore({
   themes: [
     import("shiki/themes/andromeeda.mjs"),
     import("shiki/themes/nord.mjs"),
   ],
-  langs: [import("shiki/langs/javascript.mjs")],
+  langs: [import("shiki/langs/javascript.mjs"), import("shiki/langs/css.mjs")],
   loadWasm: import("shiki/wasm"),
 });
 
@@ -49,7 +59,7 @@ const rehypeReactProd: Options = {
  * Takes a markdown string as a child and returns a rendered React tree
  * using a custom component library.
  *
- * _This uses a custom `unified` processor with `remark` and `rehype`
+ * _This uses a custom `unified` processor pipe with `remark` and `rehype`
  * that is distinct from Astro's off-the-shelf integration._
  */
 export default function Renderer({ children }) {
@@ -59,7 +69,7 @@ export default function Renderer({ children }) {
       .use(remarkRehype)
       .use(rehypeShikiFromHighlighter, highlighter, rehypeShikiOptions)
       .use(rehypeReact, import.meta.env.PROD ? rehypeReactProd : rehypeReactDev)
-      .processSync(text);
+      .processSync(text).result;
   }
-  return render(children).result;
+  return render(children);
 }

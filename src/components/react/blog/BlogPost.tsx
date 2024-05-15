@@ -10,7 +10,7 @@ export default function BlogPost({ entry }: Props) {
   const { body } = entry;
   const { title, featured_image } = entry.data;
   return (
-    <article>
+    <article className="w-3/4 m-auto">
       <BlogPostHeader title={title} featured_image={featured_image} />
       <Renderer>{body}</Renderer>
     </article>
