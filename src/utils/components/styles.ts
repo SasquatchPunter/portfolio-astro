@@ -1,4 +1,4 @@
-/** Join style strings and/or style objects into a CSS styles prop */
+/** Join style strings and style objects into a CSS styles prop */
 export function join(
   ...styles: Array<string | React.CSSProperties>
 ): React.CSSProperties {
