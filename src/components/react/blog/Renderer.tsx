@@ -20,6 +20,7 @@ import {
   Pre,
   Img,
   P,
+  Blockquote,
 } from "@components/react/blog/markdown";
 
 /*
@@ -55,6 +56,7 @@ const components: Options["components"] = {
   code: Code,
   pre: Pre,
   p: P,
+  blockquote: Blockquote,
 };
 
 const rehypeReactDev: Options = {

@@ -8,5 +8,6 @@ import H5 from "./H5";
 import H6 from "./H6";
 import Pre from "./Pre";
 import Code from "./Code";
+import Blockquote from "./Blockquote";
 
-export { P, Img, H1, H2, H3, H4, H5, H6, Pre, Code };
+export { P, Img, H1, H2, H3, H4, H5, H6, Pre, Code, Blockquote };
