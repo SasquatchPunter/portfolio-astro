@@ -39,4 +39,22 @@ class Main {
 }
 ```
 
-No here's some
+### How about some cool markup?
+
+Here's some HTML:
+
+```html
+<html>
+  <head>
+    <title>Greatest Country in NA?</title>
+  </head>
+  <body>
+    <h2>Choose the best country:</h2>
+    <select>
+      <option>Mexico</option>
+      <option>Canada</option>
+      <option>United States</option>
+    </select>
+  </body>
+</html>
+```
