@@ -14,7 +14,7 @@ export default {
   publish_mode: import.meta.env.PROD ? "editorial_workflow" : "simple",
   backend: {
     name: "github",
-    repo: "SasquatchPunter/portfolio-site",
+    repo: "SasquatchPunter/portfolio-astro",
     branch: "master",
     squash_merges: true,
   },
