@@ -28,7 +28,9 @@
         "src/layouts/*"
       ],
       "@lib": ["lib"],
-      "@lib/*": ["lib/*"]
+      "@lib/*": ["lib/*"],
+      "@utils": ["src/utils"],
+      "@utils/*": ["src/utils/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
