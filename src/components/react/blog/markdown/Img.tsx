@@ -1,5 +1,11 @@
-export default function Image({ src, alt, title }) {
+export default function Image(props) {
   return (
-    <img src={`${import.meta.env.BASE_URL}${src}`} title={title} alt={alt} />
+    <img
+      className={props.className}
+      style={props.style}
+      src={`${import.meta.env.BASE_URL}${props.src}`}
+      title={props.title}
+      alt={props.alt}
+    />
   );
 }

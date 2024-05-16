@@ -1,3 +1,11 @@
-export default function Code({ children }) {
-  return <code>{children}</code>;
+export default function Code(props) {
+  return (
+    <code
+      className={props.className}
+      style={props.style}
+      tabIndex={props.tabIndex}
+    >
+      {props.children}
+    </code>
+  );
 }

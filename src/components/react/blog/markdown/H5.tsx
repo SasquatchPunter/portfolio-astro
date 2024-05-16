@@ -1,3 +1,11 @@
-export default function H5({ children }) {
-  return <h1>{children}</h1>;
+export default function H5(props) {
+  return (
+    <h5
+      className={props.className}
+      style={props.style}
+      tabIndex={props.tabIndex}
+    >
+      {props.children}
+    </h5>
+  );
 }

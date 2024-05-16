@@ -19,6 +19,7 @@ import {
   Code,
   Pre,
   Img,
+  P,
 } from "@components/react/blog/markdown";
 
 const highlighter = await getHighlighterCore({
@@ -26,7 +27,11 @@ const highlighter = await getHighlighterCore({
     import("shiki/themes/andromeeda.mjs"),
     import("shiki/themes/nord.mjs"),
   ],
-  langs: [import("shiki/langs/javascript.mjs"), import("shiki/langs/css.mjs")],
+  langs: [
+    import("shiki/langs/javascript.mjs"),
+    import("shiki/langs/css.mjs"),
+    import("shiki/langs/java.mjs"),
+  ],
   loadWasm: import("shiki/wasm"),
 });
 
@@ -36,9 +41,15 @@ const rehypeShikiOptions: RehypeShikiOptions = {
 
 const components: Options["components"] = {
   h1: H1,
+  h2: H2,
+  h3: H3,
+  h4: H4,
+  h5: H5,
+  h6: H6,
   img: Img,
-  //   code: Code, // will overwrite Shiki's hast output
-  // pre: Pre, // will overwrites Shiki's hast output
+  code: Code,
+  pre: Pre,
+  p: P,
 };
 
 const rehypeReactDev: Options = {

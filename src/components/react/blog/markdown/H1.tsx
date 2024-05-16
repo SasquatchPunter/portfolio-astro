@@ -1,3 +1,11 @@
-export default function H1({ children }) {
-  return <h1 className="text-4xl font-bold">{children}</h1>;
+export default function H1(props) {
+  return (
+    <h1
+      className={props.className}
+      style={props.style}
+      tabIndex={props.tabIndex}
+    >
+      {props.children}
+    </h1>
+  );
 }

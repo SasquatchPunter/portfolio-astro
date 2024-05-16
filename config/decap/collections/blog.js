@@ -29,7 +29,7 @@ export default {
       widget: "image",
       required: false,
     },
-    { label: "Body", name: "body", widget: "markdown" },
+    { label: "Body", name: "body", widget: "markdown", minimal: true },
   ],
   extension: "md",
 };
