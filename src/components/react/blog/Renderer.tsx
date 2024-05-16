@@ -22,6 +22,10 @@ import {
   P,
 } from "@components/react/blog/markdown";
 
+/*
+A much lighter highlighter with only the langs and
+themes we need.
+ */
 const highlighter = await getHighlighterCore({
   themes: [
     import("shiki/themes/andromeeda.mjs"),
