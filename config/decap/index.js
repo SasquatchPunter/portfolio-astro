@@ -19,7 +19,7 @@ export default {
     squash_merges: true,
   },
   display_url: `${import.meta.env.BASE_URL}/blog`,
-  logo_url: "/favicon.svg",
+  logo_url: `${import.meta.env.BASE_URL}/favicon.svg`,
   media_folder: "public/uploads/images",
   public_folder: "/uploads/images",
   collections,
