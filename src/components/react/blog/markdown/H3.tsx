@@ -2,7 +2,7 @@ import * as classes from "@utils/components/classes";
 import * as styles from "@utils/components/styles";
 
 export default function H3(props) {
-  const className = "";
+  const className = "text-4xl";
   const style = "";
   return (
     <h3
