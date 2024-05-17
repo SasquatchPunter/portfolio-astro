@@ -19,6 +19,10 @@ This shows off the site components.
 
 ###### H6
 
-
-
 > Hello
+
+**This is bolded.**
+
+*This is italicized.*
+
+***This is bolded and italicized.***
