@@ -26,3 +26,5 @@ This shows off the site components.
 *This is italicized.*
 
 ***This is bolded and italicized.***
+
+This is just a paragraph.
