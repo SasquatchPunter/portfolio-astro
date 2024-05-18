@@ -17,8 +17,6 @@ export default {
     repo: "SasquatchPunter/portfolio-astro",
     branch: "master",
     squash_merges: true,
-    site_domain: "6919cc45-3626-46c8-a98f-e751ac068585",
-    base_url: "https://sasquatchpunter.github.io/portfolio-astro/admin",
   },
   display_url: `${import.meta.env.BASE_URL}/blog`,
   logo_url: `${import.meta.env.BASE_URL}/favicon.svg`,
