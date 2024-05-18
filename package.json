@@ -3,8 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "dev:astro": "npm run dev",
+    "dev": "npm run dev:astro",
+    "dev:astro": "npx astro dev",
     "dev:decap": "npx decap-server",
     "start": "astro dev",
     "build": "astro build",
