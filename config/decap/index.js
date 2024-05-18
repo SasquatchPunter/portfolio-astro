@@ -1,10 +1,9 @@
 import collections from "./collections";
 
 /**
- * Config for DecapCMS
+ * Config for DecapCMS -- Github Backend
  * @type {import('decap-cms-core').CmsConfig}
  */
-
 export default {
   load_config_file: false,
   // manages content in the local repo (this should only work for dev)
@@ -22,6 +21,5 @@ export default {
   logo_url: `${import.meta.env.BASE_URL}/favicon.svg`,
   media_folder: "public/uploads/images",
   public_folder: "/uploads/images",
-
   collections,
 };
