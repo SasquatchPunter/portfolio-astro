@@ -1,23 +1,39 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import SiteNav from "@components/astro/SiteNav.astro";
-import { getCollection } from "astro:content";
-import { BlogPost } from "@components/react/blog";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { H1 } from "@components/react/blog/markdown";
+
+import client from "@tina/__generated__/client";
 
 export async function getStaticPaths() {
-  const blogPosts = await getCollection("blog");
-
-  return blogPosts.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }));
+  const blogConnection = await client.queries.blogConnection();
+  const { edges } = blogConnection.data.blogConnection;
+  return edges.map((edge) => {
+    return {
+      params: {
+        slug: edge.node._sys.filename,
+      },
+      props: {
+        relativePath: edge.node._sys.relativePath,
+      },
+    };
+  });
 }
+const { relativePath } = Astro.props;
+const post = await client.queries.blog({ relativePath });
 
-const { entry } = Astro.props;
+const { title, tags, body } = post.data.blog;
 ---
 
-<BaseLayout title={`Blog | ${entry.data.title}`}>
-  <meta slot="head" http-equiv="dkmc" />
+<BaseLayout {title}>
   <SiteNav />
-  <BlogPost {entry} />
+  <h1>{title}</h1>
+  <ul>{tags?.map((t) => <li>{t}</li>)}</ul>
+  <TinaMarkdown
+    content={body}
+    components={{
+      h1: H1,
+    }}
+  />
 </BaseLayout>

@@ -9,28 +9,16 @@
       "@components/*": [
         "src/components/*"
       ],
-      "@assets": [
-        "src/assets"
-      ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@config": [
-        "config"
-      ],
-      "@config/*": [
-        "config/*"
-      ],
       "@layouts": [
         "src/layouts"
       ],
       "@layouts/*": [
         "src/layouts/*"
       ],
-      "@lib": ["lib"],
-      "@lib/*": ["lib/*"],
       "@utils": ["src/utils"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@tina": ["tina"],
+      "@tina/*": ["tina/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

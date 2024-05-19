@@ -3,6 +3,11 @@ import { StageBanner } from "@components/astro";
 import BaseBody from "./BaseBody.astro";
 import BaseHead from "./BaseHead.astro";
 
+export interface Props {
+  /** Page Title */
+  title: string;
+}
+
 const { title } = Astro.props;
 ---
 

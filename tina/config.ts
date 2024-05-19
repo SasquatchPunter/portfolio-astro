@@ -1,6 +1,6 @@
 import { defineConfig } from "tinacms";
 
-import schema from "../config/tina/schema";
+import schema from "./schema";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.GITHUB_BRANCH || process.env.HEAD || "master";

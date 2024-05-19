@@ -9,4 +9,7 @@ export default defineConfig({
   outDir: "build",
   devToolbar: { enabled: false },
   base: "/dev",
+  redirects: {
+    admin: "admin/index.html",
+  },
 });
