@@ -3,9 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "tinacms dev -c \"astro dev\"",
-    "start": "astro dev",
-    "build": "astro build",
+    "dev": "tinacms dev --rootPath config/ -c \"astro dev\"",
+    "build": "tinacms build --rootPath config && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
