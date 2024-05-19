@@ -1,10 +1,14 @@
 ---
+date: '2024-05-16T12:07:00.000Z'
+featured_image: /uploads/images/mountains.jpeg
 title: Components
 tags:
-  - styles
-date: 2024-05-16T12:07:00.000Z
-featured_image: /uploads/images/mountains.jpeg
+  - components
+  - funny
+  - style
+posted: 2024-05-18T06:00:00.000Z
 ---
+
 This shows off the site components.
 
 # H1
