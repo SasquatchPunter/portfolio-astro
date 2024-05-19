@@ -18,7 +18,7 @@ env:
 
 jobs:
   build:
-    name: Build
+    name: Build Artifact
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,6 +35,8 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Build Astro
+        env:
+          DEPLOY_BASE_PATH: ${{steps.pages.outputs.base_path}}
         run: |
           npm run build -- \
           --outDir "${{env.BUILD_DIR}}" \
@@ -46,7 +48,7 @@ jobs:
           path: ${{env.BUILD_DIR}}
 
   deploy:
-    name:
+    name: Deploy Build to Github Pages
     environment:
       name: github-pages
       url: ${{steps.deploy.outputs.page_url}}
