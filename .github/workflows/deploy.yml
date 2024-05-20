@@ -39,7 +39,7 @@ jobs:
           SITE_ORIGIN: ${{steps.pages.outputs.origin}}
           SITE_BASE: ${{steps.pages.outputs.base_path}}
           ### Public client variable for TinaCMS
-          TINA_PUBLIC_BASE_PATH: ${{env.SITE_BASE}}
+          TINA_PUBLIC_BASE_PATH: ${{steps.pages.outputs.base_path}}
         run: |
           npm run build -- \
           --outDir "${{env.BUILD_DIR}}" \
