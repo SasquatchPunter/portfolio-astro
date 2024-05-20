@@ -37,6 +37,7 @@ jobs:
       - name: Build Astro
         env:
           DEPLOY_BASE_PATH: ${{steps.pages.outputs.base_path}}
+          TINA_PUBLIC_BASE_PATH: ${{steps.pages.outputs.base_path}}
         run: |
           npm run build -- \
           --outDir "${{env.BUILD_DIR}}" \

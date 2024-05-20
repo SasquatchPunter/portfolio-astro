@@ -3,6 +3,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import SiteNav from "@components/astro/SiteNav.astro";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { H1 } from "@components/react/blog/markdown";
+import ExperimentalPostHeader from "@components/react/blog/ExperimentalPostHeader";
 
 import client from "@tina/__generated__/client";
 
@@ -29,7 +30,16 @@ const { title, tags, body } = post.data.blog;
 <BaseLayout {title}>
   <SiteNav />
   <h1>{title}</h1>
-  <ul>{tags?.map((t) => <li>{t}</li>)}</ul>
+  <ul class="flex flex-row gap-1">
+    {
+      tags?.map((t) => (
+        <li class="text-blue-600 bg-blue-200 w-max px-2 rounded-2xl border-2 border-blue-300 before:content-['#']">
+          {t}
+        </li>
+      ))
+    }
+  </ul>
+  <ExperimentalPostHeader client:load {...post} />
   <TinaMarkdown
     content={body}
     components={{
