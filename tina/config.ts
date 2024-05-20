@@ -4,8 +4,7 @@ import schema from "./schema";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.GITHUB_BRANCH || process.env.HEAD || "master";
-// Base path -- github's configure-pages prepends with a leading slash that breaks hrefs
-const basePath = (process.env.DEPLOY_BASE_PATH || "").replace(/^\/+/, "");
+const basePath = (process.env.TINA_PUBLIC_BASE_PATH || "").replace(/^\/+/, "");
 
 export default defineConfig({
   branch,

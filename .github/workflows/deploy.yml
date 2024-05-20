@@ -36,13 +36,15 @@ jobs:
         run: npm ci
       - name: Build Astro
         env:
-          DEPLOY_BASE_PATH: ${{steps.pages.outputs.base_path}}
-          TINA_PUBLIC_BASE_PATH: ${{steps.pages.outputs.base_path}}
+          SITE_ORIGIN: ${{steps.pages.outputs.origin}}
+          SITE_BASE: ${{steps.pages.outputs.base_path}}
+          ### Public client variable for TinaCMS
+          TINA_PUBLIC_BASE_PATH: ${{env.SITE_BASE}}
         run: |
           npm run build -- \
           --outDir "${{env.BUILD_DIR}}" \
-          --site "${{steps.pages.outputs.origin}}" \
-          --base "${{steps.pages.outputs.base_path}}"
+          --site "${{env.SITE_ORIGIN}}" \
+          --base "${{env.SITE_BASE}}"
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
