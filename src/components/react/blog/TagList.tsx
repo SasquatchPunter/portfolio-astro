@@ -1,1 +1,11 @@
-export default function TagList(props) {}
+export default function TagList(props) {
+  return (
+    <ul className="flex flex-row gap-1">
+      {props.tags?.map((tag) => (
+        <li className="text-blue-800 bg-blue-100 w-max px-2 rounded-2xl border-2 border-blue-300 before:content-['#']">
+          {tag}
+        </li>
+      ))}
+    </ul>
+  );
+}
