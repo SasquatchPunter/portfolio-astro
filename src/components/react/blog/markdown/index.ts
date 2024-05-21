@@ -1,13 +1,47 @@
-import P from "./P";
-import Img from "./Img";
-import H1 from "./H1";
-import H2 from "./H2";
-import H3 from "./H3";
-import H4 from "./H4";
-import H5 from "./H5";
-import H6 from "./H6";
-import Pre from "./Pre";
-import Code from "./Code";
-import Blockquote from "./Blockquote";
+import p from "./p";
+import img from "./img";
+import h1 from "./h1";
+import h2 from "./h2";
+import h3 from "./h3";
+import h4 from "./h4";
+import h5 from "./h5";
+import h6 from "./h6";
+import ol from "./ol";
+import ul from "./ul";
+import pre from "./pre";
+import code from "./code";
+import blockquote from "./blockquote";
+import code_block from "./code_block";
 
-export { P, Img, H1, H2, H3, H4, H5, H6, Pre, Code, Blockquote };
+export {
+  p as P,
+  img as Img,
+  h1 as H1,
+  h2 as H2,
+  h3 as H3,
+  h4 as H4,
+  h5 as H5,
+  h6 as H6,
+  ul as Ul,
+  ol as Ol,
+  pre as Pre,
+  code as Code,
+  blockquote as Blockquote,
+  code_block as Codeblock, // TinaCMS
+};
+export default {
+  p,
+  img,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ol,
+  ul,
+  pre,
+  code,
+  blockquote,
+  code_block, // TinaCMS
+};

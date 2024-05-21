@@ -2,7 +2,6 @@
 title: Components
 tags:
   - programming
-  - first-post
 date: 2024-05-20T10:45:48.870Z
 ---
 
