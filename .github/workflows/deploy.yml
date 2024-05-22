@@ -40,6 +40,8 @@ jobs:
           SITE_BASE: ${{steps.pages.outputs.base_path}}
           ### Public client variable for TinaCMS
           TINA_PUBLIC_BASE_PATH: ${{steps.pages.outputs.base_path}}
+          TINA_CLIENT_ID: ${{secrets.TINA_CLIENT_ID}}
+          TINA_CLIENT_TOKEN: ${{secrets.TINA_CLIENT_TOKEN}}
         run: |
           npm run build -- \
           --outDir "${{env.BUILD_DIR}}" \
