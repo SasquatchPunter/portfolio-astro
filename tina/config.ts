@@ -9,9 +9,9 @@ const basePath = (process.env.TINA_PUBLIC_BASE_PATH || "").replace(/^\/+/, "");
 export default defineConfig({
   branch,
   // Get this from tina.io
-  clientId: process.env.TINA_CLIENT_ID,
+  clientId: process.env.TINA_CLIENT_ID || "",
   // Get this from tina.io
-  token: process.env.TINA_CLIENT_TOKEN,
+  token: process.env.TINA_CLIENT_TOKEN || "",
   build: {
     outputFolder: "admin",
     publicFolder: "public",
