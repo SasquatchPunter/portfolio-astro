@@ -1,15 +1,11 @@
 interface Props {
   title: string;
-  featured_image: string;
 }
 
-export default function PostHeader({ title, featured_image }: Props) {
+export default function ({ title }: Props) {
   return (
-    <header>
-      <h1 className="text-2xl">{title}</h1>
-      {featured_image && (
-        <img src={`${import.meta.env.BASE_URL}${featured_image}`} />
-      )}
+    <header className="bg-black text-white h-32">
+      <h1 className="text-4xl">{title}</h1>
     </header>
   );
 }

@@ -1,12 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import SiteNav from "@components/astro/SiteNav.astro";
-
-import { TinaMarkdown } from "tinacms/dist/rich-text";
-import components from "@components/react/blog/markdown";
-import ExperimentalPostHeader from "@components/react/blog/ExperimentalPostHeader";
 import client from "@tina/__generated__/client";
-import TagList from "@components/react/blog/TagList";
+import { BlogPost } from "@components/react/blog";
 
 export async function getStaticPaths() {
   const blogConnection = await client.queries.blogConnection();
@@ -24,13 +20,10 @@ export async function getStaticPaths() {
 }
 const { relativePath } = Astro.props;
 const post = await client.queries.blog({ relativePath });
-
-const { title, tags, body: content } = post.data.blog;
+const { title } = post.data.blog;
 ---
 
 <BaseLayout {title}>
   <SiteNav />
-  <TagList client:load {post} />
-  <ExperimentalPostHeader client:load {post} />
-  <TinaMarkdown {content} {components} />
+  <BlogPost client:load {post} />
 </BaseLayout>

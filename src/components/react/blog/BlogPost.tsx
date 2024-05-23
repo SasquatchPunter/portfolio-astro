@@ -1,18 +1,19 @@
-import BlogPostHeader from "./BlogPostHeader";
-import Renderer from "./Renderer";
-import type { CollectionEntry } from "astro:content";
+import PostHeader from "./BlogPostHeader";
+import components from "@components/react/blog/markdown";
+import BlogPostTagList from "./BlogPostTagList";
+import type { BlogQuery } from "@tina/__generated__/types";
+import { useTina } from "tinacms/dist/react";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
-interface Props {
-  entry: CollectionEntry<"blog">;
-}
-
-export default function BlogPost({ entry }: Props) {
-  const { body } = entry;
-  const { title, featured_image } = entry.data;
+export default function BlogPost(props) {
+  const { data } = useTina<BlogQuery>(props.post);
   return (
-    <article className="lg:w-3/4 md:w-4/5 m-auto">
-      <BlogPostHeader title={title} featured_image={featured_image} />
-      <Renderer>{body}</Renderer>
-    </article>
+    <main>
+      <BlogPostTagList tags={data.blog.tags} />
+      <PostHeader title={data.blog.title} />
+      <article>
+        <TinaMarkdown components={components} content={data.blog.body} />
+      </article>
+    </main>
   );
 }
