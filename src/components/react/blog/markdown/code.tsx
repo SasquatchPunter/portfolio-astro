@@ -2,7 +2,7 @@ import * as classes from "@utils/components/classes";
 import * as styles from "@utils/components/styles";
 
 export default function Code(props) {
-  const className = "dark:bg-slate-300";
+  const className = "";
   const style = "";
   return (
     <code

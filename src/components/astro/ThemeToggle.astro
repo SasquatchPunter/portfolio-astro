@@ -1,0 +1,17 @@
+<input class="" type="checkbox" id="dark-mode-toggle" />
+
+<script>
+  import { currentThemeIsDark, setDark, unsetDark } from "@utils/theme";
+  const toggle: HTMLInputElement = document.querySelector(
+    "input[type='checkbox']#dark-mode-toggle",
+  );
+  toggle.checked = currentThemeIsDark();
+  toggle.addEventListener("change", (e) => {
+    // @ts-expect-error
+    if (e.target.checked) {
+      setDark();
+    } else {
+      unsetDark();
+    }
+  });
+</script>

@@ -11,6 +11,11 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
+<script>
+  import { loadTheme } from "@utils/theme";
+  loadTheme();
+</script>
+
 <html lang="en">
   <BaseHead {title}>
     <slot name="head" />

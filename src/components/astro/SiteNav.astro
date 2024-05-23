@@ -1,10 +1,14 @@
 ---
+import ThemeToggle from "./ThemeToggle.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
-<nav class="sticky bg-slate-500 text-yellow-50 w-full p-4">
+<nav
+  class="sticky bg-slate-500 text-yellow-50 w-full p-4 flex flex-row justify-between"
+>
   <ul class="flex flex-row gap-2">
     <li><a href=`${base}`>Home</a></li>
     <li><a href=`${base}/blog`>Blog</a></li>
   </ul>
+  <ThemeToggle />
 </nav>
