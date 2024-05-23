@@ -30,7 +30,6 @@ const { title, tags, body: content } = post.data.blog;
 
 <BaseLayout {title}>
   <SiteNav />
-  <h1>{title}</h1>
   <TagList client:load {post} />
   <ExperimentalPostHeader client:load {post} />
   <TinaMarkdown {content} {components} />
