@@ -10,8 +10,8 @@ export default function BlogPost(props) {
   return (
     <main>
       <BlogPostTagList tags={data.blog.tags} />
-      <PostHeader title={data.blog.title} />
       <article>
+        <PostHeader title={data.blog.title} />
         <TinaMarkdown components={components} content={data.blog.body} />
       </article>
     </main>
