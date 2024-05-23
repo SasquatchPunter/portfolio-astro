@@ -45,7 +45,13 @@ export default {
           name: "tags",
           label: "Tags",
           list: true,
-          options: ["first-post", "programming"],
+          options: [
+            "beginner",
+            "advanced",
+            "programming",
+            "artificial intelligence",
+            "networking",
+          ],
         },
         {
           type: "datetime",
