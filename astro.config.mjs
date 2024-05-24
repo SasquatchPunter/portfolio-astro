@@ -5,9 +5,11 @@ import tailwind from "@astrojs/tailwind";
 
 import icon from "astro-icon";
 
+import mouseoverDirective from "./src/lib/integrations/client-directives/mouseover";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [svelte(), tailwind(), react(), icon()],
+  integrations: [svelte(), tailwind(), react(), icon(), mouseoverDirective()],
   outDir: "build",
   devToolbar: {
     enabled: false,
