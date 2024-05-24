@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [svelte(), tailwind(), react(), icon()],
   outDir: "build",
   devToolbar: {
-    enabled: false
+    enabled: false,
   },
-  base: "/dev"
+  base: "/dev",
 });
