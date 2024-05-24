@@ -3,10 +3,14 @@ import svelte from "@astrojs/svelte";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
+import icon from "astro-icon";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [svelte(), tailwind(), react()],
+  integrations: [svelte(), tailwind(), react(), icon()],
   outDir: "build",
-  devToolbar: { enabled: false },
-  base: "/dev",
+  devToolbar: {
+    enabled: false
+  },
+  base: "/dev"
 });
