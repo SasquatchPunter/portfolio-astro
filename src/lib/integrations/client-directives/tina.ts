@@ -1,11 +1,11 @@
 import type { AstroIntegration } from "astro";
 export default (): AstroIntegration => ({
-  name: "client:mouseover",
+  name: "client:tina",
   hooks: {
     "astro:config:setup": ({ addClientDirective }) => {
       addClientDirective({
-        name: "mouseover",
-        entrypoint: "./src/lib/client-directives/mouseover.ts",
+        name: "tina",
+        entrypoint: "./src/lib/client-directives/tina.ts",
       });
     },
   },
