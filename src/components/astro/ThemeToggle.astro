@@ -1,4 +1,35 @@
-<input class="" type="checkbox" id="dark-mode-toggle" />
+---
+import { Icon } from "astro-icon/components";
+---
+
+<label>
+  <input type="checkbox" id="dark-mode-toggle" />
+  <span>
+    <Icon name="darkmode_icon" class="hidden dark:block duration-500" />
+    <Icon name="lightmode_icon" class="block dark:hidden duration-500" />
+  </span>
+</label>
+
+<style>
+  label {
+    @apply outline outline-seagreen-2;
+    @apply block relative w-12 h-auto rounded-full;
+    @apply cursor-pointer;
+    @apply bg-black;
+    @apply shadow-inner shadow-seagreen-2 hover:shadow-seagreen-2;
+    & span {
+      @apply absolute block bg-black border-seagreen-2 border w-auto h-full aspect-square rounded-full left-0 dark:left-full dark:-translate-x-full duration-300;
+      @apply pointer-events-none;
+      @apply flex justify-center items-center;
+      & [data-icon] {
+        @apply text-seagreen-2 w-1/2 h-1/2;
+      }
+    }
+    & input#dark-mode-toggle {
+      @apply hidden;
+    }
+  }
+</style>
 
 <script>
   import { currentThemeIsDark, setDark, unsetDark } from "@utils/theme";
