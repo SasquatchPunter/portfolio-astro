@@ -1,5 +1,4 @@
 import type { ClientDirective } from "astro";
-
 export default (function (load, _opts, element) {
   element.addEventListener(
     "mouseover",
