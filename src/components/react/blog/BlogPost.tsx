@@ -9,9 +9,9 @@ export default function BlogPost(props) {
   const { data } = useTina<BlogQuery>(props.post);
   return (
     <main>
-      <BlogPostTagList tags={data.blog.tags} />
       <article>
         <PostHeader title={data.blog.title} />
+        <BlogPostTagList tags={data.blog.tags} />
         <div className="m-4 md:m-20">
           <TinaMarkdown components={components} content={data.blog.body} />
         </div>
