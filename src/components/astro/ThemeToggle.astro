@@ -5,8 +5,14 @@ import { Icon } from "astro-icon/components";
 <label>
   <input type="checkbox" id="dark-mode-toggle" />
   <span>
-    <Icon name="darkmode_icon" class="hidden dark:block duration-500" />
-    <Icon name="lightmode_icon" class="block dark:hidden duration-500" />
+    <Icon
+      name="darkmode_icon"
+      class="absolute opacity-0 dark:opacity-100 duration-300"
+    />
+    <Icon
+      name="lightmode_icon"
+      class="absolute opacity-100 dark:opacity-0 duration-300"
+    />
   </span>
 </label>
 
@@ -16,7 +22,7 @@ import { Icon } from "astro-icon/components";
     @apply block relative w-16 md:w-12 h-auto rounded-full;
     @apply cursor-pointer;
     @apply bg-black;
-    @apply shadow-inner shadow-seagreen-2 hover:shadow-seagreen-2;
+    @apply shadow-inner shadow-seagreen-2;
     & span {
       @apply absolute block bg-black border-seagreen-2 border w-auto h-full aspect-square rounded-full left-0 dark:left-full dark:-translate-x-full duration-300;
       @apply pointer-events-none;
