@@ -39,16 +39,22 @@ import { Icon } from "astro-icon/components";
 
 <script>
   import { currentThemeIsDark, setDark, unsetDark } from "@utils/theme";
-  const toggle: HTMLInputElement = document.querySelector(
-    "input[type='checkbox']#dark-mode-toggle",
-  );
-  toggle.checked = currentThemeIsDark();
-  toggle.addEventListener("change", (e) => {
-    // @ts-expect-error
-    if (e.target.checked) {
-      setDark();
-    } else {
-      unsetDark();
-    }
-  });
+
+  loadCallback();
+  document.addEventListener("astro:after-swap", loadCallback);
+
+  function loadCallback() {
+    const toggle: HTMLInputElement = document.querySelector(
+      "input[type='checkbox']#dark-mode-toggle",
+    );
+    toggle.checked = currentThemeIsDark();
+    toggle.addEventListener("change", (e) => {
+      // @ts-expect-error
+      if (e.target.checked) {
+        setDark();
+      } else {
+        unsetDark();
+      }
+    });
+  }
 </script>

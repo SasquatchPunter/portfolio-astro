@@ -14,10 +14,12 @@ const { title } = Astro.props;
 <script>
   import { loadTheme } from "@utils/theme";
   loadTheme();
-  document.documentElement.classList.remove("hidden");
+  document.addEventListener("astro:after-swap", () => {
+    loadTheme();
+  });
 </script>
 
-<html lang="en" class="hidden">
+<html lang="en">
   <BaseHead {title}>
     <slot name="head" />
   </BaseHead>
