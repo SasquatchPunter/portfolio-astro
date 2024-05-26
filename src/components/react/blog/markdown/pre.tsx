@@ -2,7 +2,7 @@ import * as classes from "@utils/components/classes";
 import * as styles from "@utils/components/styles";
 
 export default function Pre(props) {
-  const className = "p-2 rounded-xl";
+  const className = "rounded-xl my-4";
   const style = "";
   return (
     <pre

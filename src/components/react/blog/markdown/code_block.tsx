@@ -5,7 +5,7 @@ import {} from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 function PreTag(props) {
-  const className = "rounded-xl";
+  const className = "rounded-xl my-4";
   const style = "";
   return (
     <pre

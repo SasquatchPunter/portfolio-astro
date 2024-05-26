@@ -2,7 +2,7 @@ import * as classes from "@utils/components/classes";
 import * as styles from "@utils/components/styles";
 
 export default function Ol(props) {
-  const className = "";
+  const className = "list-decimal my-4";
   const style = "";
   return (
     <ol
