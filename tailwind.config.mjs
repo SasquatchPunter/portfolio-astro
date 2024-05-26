@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin";
 import hljsLight from "react-syntax-highlighter/dist/esm/styles/hljs/nord";
-import hljsDark from "react-syntax-highlighter/dist/esm/styles/hljs/pojoaque";
+import hljsDark from "react-syntax-highlighter/dist/esm/styles/hljs/atom-one-dark-reasonable";
 
 const hljsLightClasses = Object.entries(hljsLight).reduce(
   (acc, [key, value]) => {
