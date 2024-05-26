@@ -3,7 +3,7 @@ import * as styles from "@utils/components/styles";
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 
 function PreTag(props) {
-  const className = "rounded-xl my-4 p-4 overflow-auto";
+  const className = "rounded-b-xl mb-4 p-4 overflow-auto";
   const style = "";
   return (
     <pre
@@ -28,11 +28,33 @@ function CodeTag(props) {
   );
 }
 
+function CopyButton(props) {
+  function copy(text) {
+    navigator.clipboard.writeText(text);
+  }
+  return (
+    <button className="h-full mx-4" onClick={() => copy(props.text)}>
+      Copy
+    </button>
+  );
+}
+
+function TopBar(props) {
+  return (
+    <div className="h-8 bg-gray-900 rounded-t-xl flex flex-row justify-between">
+      <div className="h-full mx-4 opacity-50">{props.lang}</div>
+      <CopyButton text={props.value || ""} />
+    </div>
+  );
+}
+
 export default function Codeblock(props) {
-  const className = "hljs-codeblock dark:hljs-codeblock-dark";
+  const className =
+    "hljs-codeblock dark:hljs-codeblock-dark relative text-white";
   const style = "";
   return (
     <div className={classes.join(className)} style={styles.join(style)}>
+      <TopBar {...props} />
       <SyntaxHighlighter
         children={props.value || ""}
         language={props.lang || "jsx"}
