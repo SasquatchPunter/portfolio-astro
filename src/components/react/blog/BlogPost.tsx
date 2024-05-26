@@ -12,7 +12,7 @@ export default function BlogPost(props) {
       <article>
         <PostHeader title={data.blog.title} />
         <BlogPostTagList tags={data.blog.tags} />
-        <div className="m-4 md:m-20">
+        <div className="m-4 md:m-20 lg:mx-80">
           <TinaMarkdown components={components} content={data.blog.body} />
         </div>
       </article>
