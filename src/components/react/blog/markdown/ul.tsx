@@ -2,7 +2,7 @@ import * as classes from "@utils/components/classes";
 import * as styles from "@utils/components/styles";
 
 export default function Ul(props) {
-  const className = "list-disc my-4";
+  const className = "list-disc my-4 list-inside";
   const style = "";
   return (
     <ul
