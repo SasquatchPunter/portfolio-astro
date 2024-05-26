@@ -8,6 +8,7 @@ import h5 from "./h5";
 import h6 from "./h6";
 import ol from "./ol";
 import ul from "./ul";
+import li from "./li";
 import pre from "./pre";
 import code from "./code";
 import blockquote from "./blockquote";
@@ -24,6 +25,7 @@ export {
   h6 as H6,
   ul as Ul,
   ol as Ol,
+  li as Li,
   pre as Pre,
   code as Code,
   blockquote as Blockquote,
@@ -40,6 +42,7 @@ export default {
   h6,
   ol,
   ul,
+  li,
   pre,
   code,
   blockquote,
