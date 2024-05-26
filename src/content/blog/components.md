@@ -1,5 +1,6 @@
 ---
 title: Components
+tags: []
 date: 2024-05-20T10:45:48.870Z
 ---
 
@@ -38,6 +39,17 @@ class DoIt {
   public static void main(String[] args) {
     System.out.println('Doit doit doit...')
   }
+}
+```
+
+```css
+selector {
+  background-color: linear-gradient(to right, #000, #e5e5e5);
+  background-image: url('/uploads/mountains.jpg');
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  border: 2px solid red;
 }
 ```
 
