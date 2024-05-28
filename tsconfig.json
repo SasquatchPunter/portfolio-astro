@@ -21,6 +21,8 @@
       "@tina/*": ["tina/*"],
       "@lib": ["src/lib"],
       "@lib/*": ["src/lib/*"],
+      "@icons": ["src/icons"],
+      "@icons/*": ["src/icons/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
