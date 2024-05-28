@@ -8,7 +8,7 @@ export default {
       name: "blog",
       label: "Blog Post",
       path: "src/content/blog",
-      format: "md",
+      format: "mdx",
       ui: {
         router(props) {
           return `${basePath}/blog/${props.document._sys.filename}`;
